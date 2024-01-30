@@ -1,4 +1,4 @@
-# Tic Tac Toe: **[LIVE](https://ahmediramadan01.github.io/tic-tac-toe-javascript/ "Tic Tac Toe's Live Preview")**
+# Tic Tac Toe: **[LIVE](https://ahmediramadan01.github.io/tic-tac-toe/ "Tic Tac Toe's Live Preview")**
 
 ## Technologies: HTML, CSS, JavaScript (using Factory Functions and the Module Pattern)
 
