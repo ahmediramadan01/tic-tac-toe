@@ -51,6 +51,9 @@ const gameController = (function () {
 	const announcementElement = document.querySelector(".announcement");
 	announcementElement.style.color = "#000";
 
+	const restartButtonElement = document.querySelector(".restart-button");
+	restartButtonElement.style.color = "#000";
+
 	let currentPlayer = playerX,
 		gameOver = false,
 		winner;
@@ -112,10 +115,24 @@ const gameController = (function () {
 			}
 		};
 
+		const restartGame = function (event) {
+			if (event.key === "r" || event.key === "R" || event.target.closest(".restart-button")) {
+				for (let i = 0; i < 9; i++) {
+					gameBoard.modifyBoard(i, "");
+				}
+				gameOver = false;
+				gameBoard.clearBoard();
+				currentPlayer = playerX;
+				announcementElement.textContent = currentPlayer === playerX ? "Player X's turn" : "Player O's turn";
+			}
+		};
+
 		gameBoard.getGameBoardElement().addEventListener("click", function (event) {
 			if (event.target.classList.contains("cell")) {
 				handlePlayerMove(event);
 			}
 		});
+		restartButtonElement.addEventListener("click", restartGame);
+		window.addEventListener("keydown", restartGame);
 	})();
 })();
