@@ -33,3 +33,18 @@ const gameBoard = (function () {
 	return { getGameBoardElement, getBoard, modifyBoard, clearBoard, renderCell };
 })();
 gameBoard.clearBoard();
+
+const gameController = (function () {
+	const Player = function (name, marker) {
+		const move = function (position) {
+			if (position >= 0 && position < 9) {
+				gameBoard.modifyBoard(position, marker);
+			}
+		};
+
+		return { name, marker, move };
+	};
+
+	const playerX = Player("playerX", "x");
+	const playerO = Player("playerO", "o");
+})();
