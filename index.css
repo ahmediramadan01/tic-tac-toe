@@ -17,6 +17,15 @@ body {
 	padding: 1rem 1rem 2rem;
 }
 
+@keyframes scale-up {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
 .game-title {
 	text-align: center;
 	font-family: "Pacifico";
@@ -37,6 +46,10 @@ body {
 	height: 12rem;
 	cursor: pointer;
 	background-color: #fff;
+}
+
+.cell img {
+	animation: scale-up 500ms;
 }
 
 .display-section {
