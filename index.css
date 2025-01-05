@@ -20,14 +20,14 @@ body {
 
 /* New game */
 
+.game {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .game--new {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 73.2rem;
-  width: 100%;
-  padding: 0 1.6rem;
 }
 
 .game--new__logo {
@@ -56,7 +56,6 @@ body {
   font-weight: 500;
   line-height: 1.43;
   margin-bottom: 4.8rem;
-  max-width: 61rem;
 }
 
 .button {
@@ -77,19 +76,64 @@ body {
 .button--primary {
   padding: 1.6rem 1.2rem;
   background-color: #4fc3f7;
+  max-width: 52rem;
+  width: 100%;
 }
 
 .button--primary:hover {
   background-color: #81d4fa;
 }
 
-.button--new {
-  max-width: 52rem;
-  width: 100%;
+/* Start game */
+
+.game--start {
+  display: none;
+}
+
+.typography--heading-s {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-bottom: 5.4rem;
+}
+
+.pick-box {
+  background-color: #fff;
+  padding: 4rem 8.72rem 3.8rem;
+  border-radius: 1.6rem;
+  margin-bottom: 5.4rem;
+}
+
+.pick-box__choices {
+  display: flex;
+  justify-content: space-between;
+  gap: 16.76rem;
+  margin-bottom: 4rem;
+}
+
+.pick-box__choice {
+  display: flex;
+  flex-direction: column;
+  gap: 6.29rem;
+}
+
+.choice__icon {
+  width: 8.91rem;
+  height: 8.91rem;
+}
+
+.typography--text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.33;
+  text-transform: uppercase;
 }
 
 @media (width <= 32.2em) {
   /* New game */
+
+  body {
+    padding: 0 1.6rem;
+  }
 
   .game--new__logo {
     gap: 1.4rem;
@@ -107,6 +151,48 @@ body {
 
   .typography--heading-m {
     font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
+
+  /* Start game */
+
+  .typography--heading-s {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin-bottom: 2.7rem;
+  }
+
+  .pick-box {
+    padding: 4rem 5.12rem 4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .pick-box__choices {
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .choice__icon {
+    width: 8.91rem;
+    height: 8.91rem;
+  }
+
+  .typography--text {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+}
+
+@media (height <= 37.5em) {
+  .typography--heading-s {
+    margin-bottom: 1.8rem;
+  }
+
+  .pick-box__choice {
+    gap: 3.15rem;
+  }
+
+  .pick-box {
     margin-bottom: 2.4rem;
   }
 }

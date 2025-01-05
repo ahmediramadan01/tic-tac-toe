@@ -14,8 +14,8 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <main class="game">
-      <section class="game--new">
+    <main>
+      <section class="game game--new">
         <figure class="game--new__logo">
           <img src="./images/x.svg" alt="X icon" class="game--new__icon" />
           <img src="./images/o.svg" alt="O icon" class="game--new__icon" />
@@ -25,6 +25,29 @@
           Dive into the excitement now and experience the timeless joy of this classic game!
         </h2>
         <button class="button button--primary button--new">New game</button>
+      </section>
+      <section class="game game--start">
+        <h3 class="typography typography--heading-s">Pick player 1st mark</h3>
+        <div class="pick-box">
+          <div class="pick-box__choices">
+            <div class="pick-box__choice">
+              <label for="pick-box__choice--x">
+                <img src="./images/x.svg" alt="X icon" class="choice__icon" />
+              </label>
+              <input type="radio" id="pick-box__choice--x" name="choice" value="x" checked />
+            </div>
+            <div class="pick-box__choice">
+              <label for="pick-box__choice--o">
+                <img src="./images/o.svg" alt="O icon" class="choice__icon" />
+              </label>
+              <input type="radio" id="pick-box__choice--o" name="choice" value="o" />
+            </div>
+          </div>
+          <p class="typography typography--text">
+            Remember: <span class="choice">X</span> is going first
+          </p>
+        </div>
+        <button class="button button--primary button--start">Start game</button>
       </section>
     </main>
   </body>
