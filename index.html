@@ -14,41 +14,95 @@
     <script src="./index.js" defer></script>
   </head>
   <body>
-    <main>
-      <section class="game game--new">
-        <figure class="game--new__logo">
-          <img src="./images/x.svg" alt="X icon" class="game--new__icon" />
-          <img src="./images/o.svg" alt="O icon" class="game--new__icon" />
-        </figure>
-        <h1 class="typography typography--heading-xl">Tic Tac Toe</h1>
-        <h2 class="typography typography--heading-m">
-          Dive into the excitement now and experience the timeless joy of this classic game!
-        </h2>
-        <button class="button button--primary button--new">New game</button>
-      </section>
-      <section class="game game--start">
-        <h3 class="typography typography--heading-s">Pick player 1st mark</h3>
-        <div class="pick-box">
-          <div class="pick-box__choices">
-            <div class="pick-box__choice">
-              <label for="pick-box__choice--x">
-                <img src="./images/x.svg" alt="X icon" class="choice__icon" />
-              </label>
-              <input type="radio" id="pick-box__choice--x" name="choice" value="x" checked />
-            </div>
-            <div class="pick-box__choice">
-              <label for="pick-box__choice--o">
-                <img src="./images/o.svg" alt="O icon" class="choice__icon" />
-              </label>
-              <input type="radio" id="pick-box__choice--o" name="choice" value="o" />
-            </div>
+    <section class="game game--new">
+      <figure class="game--new__logo">
+        <img src="./images/x.svg" alt="X icon" class="game--new__icon" />
+        <img src="./images/o.svg" alt="O icon" class="game--new__icon" />
+      </figure>
+      <h1 class="typography typography--heading-xl">Tic Tac Toe</h1>
+      <h2 class="typography typography--heading-m">
+        Dive into the excitement now and experience the timeless joy of this classic game!
+      </h2>
+      <button class="button button--primary button--new">New game</button>
+    </section>
+    <section class="game game--start">
+      <h3 class="typography typography--heading-s">Pick player 1st mark</h3>
+      <div class="pick-box">
+        <div class="pick-box__choices">
+          <div class="pick-box__choice">
+            <label for="pick-box__choice--x">
+              <img src="./images/x.svg" alt="X icon" class="choice__icon" />
+            </label>
+            <input type="radio" id="pick-box__choice--x" name="choice" value="x" checked />
           </div>
-          <p class="typography typography--text">
-            Remember: <span class="choice">X</span> is going first
-          </p>
+          <div class="pick-box__choice">
+            <label for="pick-box__choice--o">
+              <img src="./images/o.svg" alt="O icon" class="choice__icon" />
+            </label>
+            <input type="radio" id="pick-box__choice--o" name="choice" value="o" />
+          </div>
         </div>
-        <button class="button button--primary button--start">Start game</button>
-      </section>
-    </main>
+        <p class="typography typography--text">
+          Remember: <span class="choice">X</span> is going first
+        </p>
+      </div>
+      <button class="button button--primary button--start">Start game</button>
+    </section>
+    <section class="game game--play">
+      <header class="game--play__header">
+        <figure class="game--play__logo">
+          <img src="./images/x.svg" alt="X icon" class="game--play__icon" />
+          <img src="./images/o.svg" alt="O icon" class="game--play__icon" />
+        </figure>
+        <div class="game--play__turn">
+          <img src="./images/o.svg" alt="Turn's icon" class="turn__icon" />
+          <p class="typography typography--text">TURN</p>
+        </div>
+      </header>
+      <main class="game--play__board">
+        <div class="board__box board__box--0">
+          <div class="board__move" data-cell="0"><img src="./images/o.svg" alt="O icon" /></div>
+        </div>
+        <div class="board__box board__box--1">
+          <div class="board__move" data-cell="1"></div>
+        </div>
+        <div class="board__box board__box--2">
+          <div class="board__move" data-cell="2"></div>
+        </div>
+        <div class="board__box board__box--3">
+          <div class="board__move" data-cell="3"><img src="./images/x.svg" alt="X icon" /></div>
+        </div>
+        <div class="board__box board__box--4">
+          <div class="board__move" data-cell="4"><img src="./images/o.svg" alt="O icon" /></div>
+        </div>
+        <div class="board__box board__box--5">
+          <div class="board__move" data-cell="5"></div>
+        </div>
+        <div class="board__box board__box--6">
+          <div class="board__move" data-cell="6"><img src="./images/x.svg" alt="X icon" /></div>
+        </div>
+        <div class="board__box board__box--7">
+          <div class="board__move" data-cell="7"></div>
+        </div>
+        <div class="board__box board__box--8">
+          <div class="board__move" data-cell="8"><img src="./images/o.svg" alt="O icon" /></div>
+        </div>
+      </main>
+      <output class="game--play__scores">
+        <div class="game--play__score game--play__score--x">
+          <span class="typography typography--subtext"
+            >X (Player <span class="score__player-1">1</span>)</span
+          >
+          <span class="typography typography--text score--1">0</span>
+        </div>
+        <div class="game--play__score game--play__score--o">
+          <span class="typography typography--subtext">
+            Y (Player <span class="score__player-2">2</span>)</span
+          >
+          <span class="typography typography--text score--1">0</span>
+        </div>
+      </output>
+      <button class="button button--secondary button--reset">Reset game</button>
+    </section>
   </body>
 </html>

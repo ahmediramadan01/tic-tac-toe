@@ -6,11 +6,13 @@
   const buttonNewGame = document.querySelector(".button--new");
   const choiceElement = document.querySelector(".choice");
   const buttonStartGame = document.querySelector(".button--start");
+  const gamePlaySection = document.querySelector(".game--play");
+  const buttonResetGame = document.querySelector(".button--reset");
 
   const UIController = (function () {
     const handleNewGameUI = function () {
       gameNewSection.style.display = "none";
-      gameStartSection.style.display = "flex";
+      gameStartSection.style.display = "block";
     };
 
     const getPlayer1 = () => document.querySelector('input[name="choice"]:checked').value;
@@ -22,9 +24,22 @@
 
     const handleStartGameUI = function () {
       gameStartSection.style.display = "none";
+      gamePlaySection.style.display = "block";
     };
 
-    return { handleNewGameUI, toggleChoice, getPlayer1, getPlayer2, handleStartGameUI };
+    const handleResetGameUI = function () {
+      gamePlaySection.style.display = "none";
+      gameStartSection.style.display = "flex";
+    };
+
+    return {
+      handleNewGameUI,
+      toggleChoice,
+      getPlayer1,
+      getPlayer2,
+      handleStartGameUI,
+      handleResetGameUI,
+    };
   })();
 
   const gameController = (function () {
@@ -43,10 +58,15 @@
       const player2 = createPlayer("Player 2", UIController.getPlayer2());
     };
 
-    return { newGame, startGame };
+    const resetGame = function () {
+      UIController.handleResetGameUI();
+    };
+
+    return { newGame, startGame, resetGame };
   })();
 
   buttonNewGame.addEventListener("click", gameController.newGame);
   gameStartSection.addEventListener("change", UIController.toggleChoice);
   buttonStartGame.addEventListener("click", gameController.startGame);
+  buttonResetGame.addEventListener("click", gameController.resetGame);
 })();

@@ -71,13 +71,13 @@ body {
   font-weight: 500;
   border-radius: 999px;
   transition: background-color 0.2s ease;
+  padding: 1.6rem 1.2rem;
+  max-width: 52rem;
+  width: 100%;
 }
 
 .button--primary {
-  padding: 1.6rem 1.2rem;
   background-color: #4fc3f7;
-  max-width: 52rem;
-  width: 100%;
 }
 
 .button--primary:hover {
@@ -126,6 +126,167 @@ body {
   font-weight: 600;
   line-height: 1.33;
   text-transform: uppercase;
+}
+
+/* Play game */
+
+.game--play {
+  display: none;
+  max-width: 52rem;
+  width: 100%;
+}
+
+.game--play__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.2rem;
+}
+
+.game--play__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.52rem;
+}
+
+.game--play__icon {
+  width: 2.97rem;
+  height: 2.97rem;
+}
+
+.game--play__turn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.88rem;
+  padding: 2.4rem 0;
+  border-radius: 1.6rem;
+  background-color: #fff;
+  width: 23.7rem;
+}
+
+.turn__icon {
+  width: 1.86rem;
+  height: 1.86rem;
+}
+
+.game--play__board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  justify-content: center;
+  padding: 3.2rem;
+  border-radius: 1.6rem;
+  background-color: #fff;
+  margin-bottom: 2.4rem;
+}
+
+.board__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.4rem;
+}
+
+.board__box--0 {
+  border-right: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.board__box--1 {
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.board__box--2 {
+  border-left: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.board__box--3 {
+  border-top: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.board__box--4 {
+  border: 1px solid #c3c3c3;
+}
+
+.board__box--5 {
+  border-top: 1px solid #c3c3c3;
+  border-left: 1px solid #c3c3c3;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.board__box--6 {
+  border-right: 1px solid #c3c3c3;
+  border-top: 1px solid #c3c3c3;
+}
+
+.board__box--7 {
+  border-left: 1px solid #c3c3c3;
+  border-right: 1px solid #c3c3c3;
+  border-top: 1px solid #c3c3c3;
+}
+
+.board__box--8 {
+  border-left: 1px solid #c3c3c3;
+  border-top: 1px solid #c3c3c3;
+}
+
+.board__move {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10.4rem;
+  height: 10.4rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+}
+
+.board__move img {
+  width: 9.65rem;
+  height: 9.65rem;
+}
+
+.game--play__scores {
+  display: flex;
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+
+.game--play__score {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.45rem 0;
+  border-radius: 1.6rem;
+}
+
+.game--play__score--x {
+  background-color: #4fc3f7;
+}
+
+.game--play__score--o {
+  background-color: #ffc107;
+}
+
+.typography--subtext {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.button--reset {
+  background-color: #c5c5c5;
+}
+
+.button--reset:hover {
+  background-color: #ebebeb;
 }
 
 @media (width <= 32.2em) {
@@ -181,9 +342,53 @@ body {
     font-size: 1.6rem;
     line-height: normal;
   }
+
+  /* Play game */
+
+  .game--play {
+    max-width: 34.3rem;
+  }
+
+  .game--play__logo {
+    gap: 0.26rem;
+  }
+
+  .game--play__turn {
+    padding: 1.8rem 0;
+    width: 17.6rem;
+  }
+
+  .game--play__board {
+    padding: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .board__box {
+    padding: 1.6rem;
+  }
+
+  .board__move {
+    width: 7.2rem;
+    height: 7.2rem;
+  }
+
+  .board__move img {
+    width: 6.68rem;
+    height: 6.68rem;
+  }
+
+  .game--play__scores {
+    margin-bottom: 1.8rem;
+  }
+
+  .game--play__score {
+    padding: 0.8rem 0;
+  }
 }
 
 @media (height <= 37.5em) {
+  /* Start game */
+
   .typography--heading-s {
     margin-bottom: 1.8rem;
   }
@@ -194,5 +399,49 @@ body {
 
   .pick-box {
     margin-bottom: 2.4rem;
+  }
+
+  .choice__icon {
+    width: 6.75rem;
+    height: 6.75rem;
+  }
+
+  /* Play game */
+
+  .game--play__header {
+    margin-bottom: 1.1rem;
+  }
+
+  .game--play__logo {
+    gap: 0.26rem;
+  }
+
+  .game--play__turn {
+    padding: 1.2rem 0;
+    width: 17.6rem;
+  }
+
+  .game--play__board {
+    padding: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .board__box {
+    padding: 0.8rem;
+  }
+
+  .game--play__scores {
+    margin-bottom: 0.9rem;
+  }
+
+  .game--play__score {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.6rem;
+  }
+
+  .button--reset {
+    padding: 0.8rem 0.6rem;
   }
 }
