@@ -238,7 +238,7 @@ body {
   border-top: 1px solid #c3c3c3;
 }
 
-.board__move {
+.board__cell {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -367,7 +367,7 @@ body {
     padding: 1.6rem;
   }
 
-  .board__move {
+  .board__cell {
     width: 7.2rem;
     height: 7.2rem;
   }
