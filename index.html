@@ -91,18 +91,25 @@
       <output class="game--play__scores">
         <div class="game--play__score game--play__score--x">
           <span class="typography typography--subtext"
-            >X (Player <span class="score__player-1">1</span>)</span
+            >X (Player <span class="player--x">1</span>)</span
           >
-          <span class="typography typography--text score--1">0</span>
+          <span class="typography typography--text score--x">0</span>
         </div>
         <div class="game--play__score game--play__score--o">
           <span class="typography typography--subtext">
-            Y (Player <span class="score__player-2">2</span>)</span
+            O (Player <span class="player--o">2</span>)</span
           >
-          <span class="typography typography--text score--1">0</span>
+          <span class="typography typography--text score--o">0</span>
         </div>
       </output>
       <button class="button button--secondary button--reset">Reset game</button>
+      <dialog class="dialog">
+        <div class="dialog__result"></div>
+        <div class="dialog__buttons">
+          <button class="button button--secondary button--reset">Quit</button>
+          <button class="button button--primary button--new">New Game</button>
+        </div>
+      </dialog>
     </section>
   </body>
 </html>

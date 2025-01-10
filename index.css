@@ -16,6 +16,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 /* New game */
@@ -181,6 +182,7 @@ body {
   border-radius: 1.6rem;
   background-color: #fff;
   margin-bottom: 2.4rem;
+  position: relative;
 }
 
 .board__box {
@@ -253,6 +255,23 @@ body {
   height: 9.65rem;
 }
 
+/* .line {
+  position: absolute;
+  background-color: red;
+  width: 10px;
+  height: 0;
+  transform-origin: center;
+  display: none;
+} */
+
+.line {
+  position: absolute;
+  height: 1rem;
+  transform-origin: 0 50%;
+  border-radius: 999px;
+  z-index: 10;
+}
+
 .game--play__scores {
   display: flex;
   gap: 1.6rem;
@@ -287,6 +306,56 @@ body {
 
 .button--reset:hover {
   background-color: #ebebeb;
+}
+
+.dialog {
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 6.1rem 0;
+  background-color: #6e6e6e;
+  z-index: 20;
+}
+
+.dialog > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog__result {
+  gap: 2.8rem;
+  margin-bottom: 3.95rem;
+}
+
+.dialog__icon {
+  width: 9.65rem;
+  height: 9.65rem;
+}
+
+.dialog__text {
+  text-transform: uppercase;
+  font-size: 6.4rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.dialog__text--x {
+  color: #4fc3f7;
+}
+
+.dialog__text--o {
+  color: #ffc107;
+}
+
+.dialog__buttons {
+  gap: 2.4rem;
+}
+
+.dialog__buttons button {
+  width: 264px;
 }
 
 @media (width <= 32.2em) {
