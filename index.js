@@ -47,7 +47,7 @@
       }
     };
 
-    const setScore = function (marker, score) {
+    const setScoreUI = function (marker, score) {
       marker === "x" ? (playerXScore.textContent = score) : (playerOScore.textContent = score);
     };
 
@@ -56,8 +56,10 @@
       gameStartSection.style.display = "none";
       gamePlaySection.style.display = "none";
 
-      setScore("x", 0);
-      setScore("o", 0);
+      document.querySelector("input[value='x']").checked = true;
+
+      setScoreUI("x", 0);
+      setScoreUI("o", 0);
     };
 
     const changeCellBackgroundColor = function (event) {
@@ -167,7 +169,7 @@
       getPlayer2,
       handleStartGameUI,
       handleResetGameUI,
-      setScore,
+      setScoreUI,
       changeCellBackgroundColor,
       changeTurnIcon,
       renderCell,
@@ -271,7 +273,7 @@
         }
       }
 
-      return !roundWon();
+      return !roundWon(winningCombinations);
     };
 
     const playRound = function (event) {
@@ -283,7 +285,7 @@
         if (winningCombination) {
           winner = currentPlayer;
 
-          UIController.setScore(winner.marker, winner.marker === "x" ? ++scoreX : ++scoreO);
+          UIController.setScoreUI(winner.marker, winner.marker === "x" ? ++scoreX : ++scoreO);
 
           UIController.drawLine(winningCombination, winner.marker);
           gameOver = true;
