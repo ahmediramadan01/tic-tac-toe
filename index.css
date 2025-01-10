@@ -250,19 +250,10 @@ body {
   cursor: pointer;
 }
 
-.board__move img {
+.board__cell img {
   width: 9.65rem;
   height: 9.65rem;
 }
-
-/* .line {
-  position: absolute;
-  background-color: red;
-  width: 10px;
-  height: 0;
-  transform-origin: center;
-  display: none;
-} */
 
 .line {
   position: absolute;
@@ -319,6 +310,11 @@ body {
   z-index: 20;
 }
 
+.dialog[open]::backdrop {
+  backdrop-filter: blur(24px);
+  background-color: rgba(0, 0, 0, 0.16);
+}
+
 .dialog > * {
   display: flex;
   align-items: center;
@@ -355,7 +351,7 @@ body {
 }
 
 .dialog__buttons button {
-  width: 264px;
+  width: 26.4rem;
 }
 
 @media (width <= 32.2em) {
@@ -441,7 +437,7 @@ body {
     height: 7.2rem;
   }
 
-  .board__move img {
+  .board__cell img {
     width: 6.68rem;
     height: 6.68rem;
   }
@@ -452,6 +448,32 @@ body {
 
   .game--play__score {
     padding: 0.8rem 0;
+  }
+
+  .dialog {
+    padding: 2rem 0;
+  }
+
+  .dialog__result {
+    gap: 1rem;
+    margin-bottom: 2.75rem;
+  }
+
+  .dialog__icon {
+    width: 4.45rem;
+    height: 4.45rem;
+  }
+
+  .dialog__text {
+    font-size: 3.2rem;
+  }
+
+  .dialog__buttons {
+    gap: 1.6rem;
+  }
+
+  .dialog__buttons button {
+    width: 16.35rem;
   }
 }
 
@@ -512,5 +534,25 @@ body {
 
   .button--reset {
     padding: 0.8rem 0.6rem;
+  }
+
+  .dialog {
+    padding: 2rem 1rem;
+  }
+
+  .dialog__result {
+    margin-bottom: 1.8rem;
+  }
+
+  .dialog__text {
+    font-size: 2.4rem;
+  }
+
+  .dialog__buttons {
+    gap: 0.8rem;
+  }
+
+  .dialog__buttons button {
+    padding: 1.2rem 0.8rem;
   }
 }
