@@ -114,6 +114,7 @@ body {
 .pick-box__choice {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 6.29rem;
 }
 
