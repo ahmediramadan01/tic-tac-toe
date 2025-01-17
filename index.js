@@ -147,7 +147,7 @@
       dialogResult.innerHTML = "";
       dialogResult.insertAdjacentHTML("beforeend", markup);
 
-      setTimeout(() => dialogModal.show(), 500);
+      setTimeout(() => dialogModal.showModal(), 1000);
     };
 
     const closeDialog = function (result, winner) {
