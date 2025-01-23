@@ -16,7 +16,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 
 /* New game */
@@ -302,7 +301,7 @@ body {
 
 .dialog {
   border: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -310,6 +309,7 @@ body {
   padding: 6.1rem 0;
   background-color: #6e6e6e;
   z-index: 20;
+  border-radius: 1.6rem;
 }
 
 .dialog[open]::backdrop {
