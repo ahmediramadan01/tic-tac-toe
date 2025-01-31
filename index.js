@@ -1,6 +1,7 @@
 "use strict";
 
 (function () {
+  /* DOM Elements  */
   const gameNewSection = document.querySelector(".game--new");
   const gameStartSection = document.querySelector(".game--start");
   const buttonsNewGame = document.querySelectorAll(".button--new");
@@ -19,6 +20,7 @@
   const dialogModal = document.querySelector(".dialog");
   const dialogResult = document.querySelector(".dialog__result");
 
+  /* UI Controller */
   const UIController = (function () {
     const handleNewGameUI = function () {
       gameNewSection.style.display = "none";
@@ -180,6 +182,7 @@
     };
   })();
 
+  /* Game Logic Controller */
   const gameController = (function () {
     let player1,
       player2,
@@ -311,6 +314,7 @@
     return { getCurrentPlayer, newGame, startGame, resetGame, gameBoard, playRound };
   })();
 
+  /* Event Listeners */
   buttonsNewGame.forEach((button) => {
     button.addEventListener("click", gameController.newGame);
   });
