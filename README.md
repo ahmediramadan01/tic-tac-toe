@@ -1,4 +1,4 @@
-# Tic Tac Toe: **[LIVE](https://ahmediramadan01.github.io/tic-tac-toe/ "Tic Tac Toe's Live Preview")**
+# Tic Tac Toe: **[LIVE](https://ahmediramadan01.github.io/tic-tac-toe-game/ "Tic Tac Toe's Live Preview")**
 
 ## Technologies: HTML, CSS, JavaScript
 
